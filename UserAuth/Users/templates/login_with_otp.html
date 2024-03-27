@@ -1,0 +1,24 @@
+<!-- Users/templates/login/login_with_otp.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with OTP</title>
+</head>
+<body>
+    <h1>Login with OTP</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="email_or_username">Email or Username:</label>
+        <input type="text" name="email_or_username" id="email_or_username">
+        <br>
+        <label for="otp">OTP:</label>
+        <input type="text" name="otp" id="otp">
+        <br>
+        <button type="submit">Login</button>
+
+        <a href="{% url 'password_reset' %}"><i>Forgot Password?</i></a>
+    </form>
+</body>
+</html>

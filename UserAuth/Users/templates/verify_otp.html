@@ -1,0 +1,22 @@
+<!-- Users/templates/verification/verify_otp.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h1>OTP Verification</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="email_or_username">Email or Username:</label>
+        <input type="text" name="email_or_username" id="email_or_username">
+        <br>
+        <label for="otp">OTP:</label>
+        <input type="text" name="otp" id="otp">
+        <br>
+        <button type="submit">Verify OTP</button>
+    </form>
+</body>
+</html>
